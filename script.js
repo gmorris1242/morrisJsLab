@@ -1,3 +1,6 @@
+// try a var keeping track of the amount of times grant hits zero in order to track the
+// round and be able to say something differnet after each round
+
 var userName= ""
 var userHealth = 40;
 var grantHealth = 10;
@@ -31,27 +34,39 @@ function startCombat() {
     if (grantHealth <= 0) {
       userWins++;
       grantHealth = 10
-      // console.log("You won this round.");
+      if (userWins === 1) {
+        console.log(userName + " wins round one!")
+      } else if (userWins === 2) {
+        console.log(userName + " wins round two!  One more to go!")
+      }
     } else if (userHealth <= 0) {
       grantWins++;
     }
-    var attackOrQuit = prompt("Attack or Quit?");
-    if (attackOrQuit.toLowerCase() === "quit") {
-      break;
-    }
-    // while (attackOrQuit.toLowerCase() !== "attack" || attackOrQuit.toLowerCase() !== "quit" ){
-    //   var error = prompt("Choose either Attack or Quit");
-    // }
-  }//loop
+
+
+
   if (userWins === 3) {
-    console.log(userName + " Wins!");
+    console.log(userName + " has defeated Grant!");
   } else if (grantWins > 0) {
     console.log("Grant Wins!");
   } else if (userHealth === 0 && grantHealth === 0){
     console.log("It's a tie!")
-  }else {
-    console.log("You have left the game")
+  // }else {
+  //   console.log("You have left the game")
   }
+
+  if (userWins < 3 && grantWins <  1){
+    var attackOrQuit = prompt("Attack or Quit?");
+  attackOrQuit = attackOrQuit.toLowerCase();
+  while (attackOrQuit !== "attack" && attackOrQuit !== "quit"){
+     attackOrQuit = prompt("Choose Attack or Quit");
+  }
+  if (attackOrQuit === "quit") {
+    console.log("You have left the game.")
+    break;
+  }
+}
+  }//loop
 }//function
 
 startGame();
