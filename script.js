@@ -1,6 +1,3 @@
-// try a var keeping track of the amount of times grant hits zero in order to track the
-// round and be able to say something differnet after each round
-
 (function () {
 
 var character = {
@@ -56,7 +53,7 @@ function startCombat() {
     } else if (attackOrQuit === "heal"  && character.healsRemaining > 0) {
         character.heal();
         character.healsRemaining--;
-        console.log(character.name + " has healed and has " + character.health + " and has " + character.healsRemaining + " heal remaing." );
+        console.log(character.name + " has healed and has " + character.health + " health with " + character.healsRemaining + " heal remaining." );
     } else if(attackOrQuit === "heal"  && character.healsRemaining === 0){
       console.log("You don't have any heals left");
     } else if ( attackOrQuit === "attack"){
@@ -64,12 +61,13 @@ function startCombat() {
 
     character.health-= grant.generateAttackDamage();
     grant.health-= character.generateAttackDamage();
-    console.log(character.name + " has " + character.health+ " left.");
-    console.log("Grant the Mighty Chicken has " + grant.health + " left.");
+    console.log(character.name + " has " + character.health+ " health remaining.");
+    console.log("Grant the Mighty Chicken has " + grant.health + " health remaining.");
 
-    if (grant.health <= 0) {
+    if (grant.health <= 0 && character.health > 0) {
       character.wins++;
-      grant.health = 10
+      grant.health = 10;
+      // console.log(character.name + " wins this round");
       if (character.wins === 1) {
         console.log(character.name + " wins round one!")
       } else if (character.wins === 2) {
@@ -79,6 +77,7 @@ function startCombat() {
       } else if (character.wins === 4) {
         console.log(character.name + " wins round four!  One more to go!")
       }
+
       } else if (character.health <= 0) {
       grant.wins++;
       }
@@ -87,9 +86,7 @@ function startCombat() {
       console.log(character.name + " has defeated Grant!");
     } else if (grant.wins > 0) {
       console.log("Grant Wins!");
-    } else if (character.health === 0 && grant.health === 0){
-      console.log("It's a tie!")
-  }
+    } 
 }
 
   }//loop
