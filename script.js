@@ -6,7 +6,7 @@ var character = {
   wins: 0,
   healsRemaining: 2,
   generateAttackDamage:  function() {
-     return Math.floor(Math.random() * 3) + 1;
+     return Math.floor(Math.random() * 5) + 1;
    },
   heal: function() {
       this.health += Math.floor(Math.random() * 10) + 1;
@@ -86,7 +86,7 @@ function startCombat() {
       console.log(character.name + " has defeated Grant!");
     } else if (grant.wins > 0) {
       console.log("Grant Wins!");
-    } 
+    }
 }
 
   }//loop
