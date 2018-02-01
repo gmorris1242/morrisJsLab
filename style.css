@@ -16,6 +16,10 @@
 
 body{
   background-color: black;
+    max-width: 1450px;
+    width: 90%;
+    margin: 0 auto;
+
 }
 
 header {
