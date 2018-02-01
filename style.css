@@ -1,0 +1,69 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+header {
+  display: flex;
+}
+
+button {
+  text-align: center;
+  padding: 20px;
+  background-color: brown;
+  display: inline-block;
+  width: 200px;
+  height: auto;
+  margin-top: 30px;
+}
+
+p {
+  padding: 20px;
+}
+
+.buttons {
+  text-align: center;
+  padding: 20px;
+}
+
+#startButton {
+  text-align: center;
+  margin: 0 auto;
+  margin-top: 10px;
+  justify-content: center;
+}
+
+#main {
+  /* display: none; */
+  margin: 0 auto;
+  text-align: center;
+}
+
+.stats {
+    border: 2px solid black;
+    padding: 20px;
+    width: 90%;
+    margin: 0 auto;
+}
+
+#playerStats {
+  display: flex;
+  justify-content: center;
+  padding: 10px;
+}
+
+span {
+  margin: 0 10px;
+}
+
+#grantStats {
+  display: flex;
+  justify-content: center;
+  padding: 10px;
+
+}
+
+.displayNone {
+  display: none;
+}

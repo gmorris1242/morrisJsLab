@@ -5,9 +5,38 @@
     <title></title>
     <link rel="stylesheet" href="style.css">
   </head>
-
   <body>
+    <header>
+      <button id="startButton" type="button" name="button">Start</button>
+    </header>
+    <div id="main" class="displayNon">
+      <div class="buttons">
+        <button id="attackButton"  type="button" name="button">Attack</button>
+        <button id="healButton"  type="button" name="button">Heal</button>
+        <button id="quitButton" type="button" name="button">Quit/Restart</button>
+      </div>
+      <p id="message">messages here</p>
+      <div class="stats">
+        <div id="name"><h3>Player Stats</h3></div>
+        <div id="playerStats">
+          <span>Health</span>
+          <progress id="characterHealthBar" value="40" max="40">0%</progress>
+          <span>Heal Count</span>
+          <progress id="healsRemainingBar"value="2" max="2">0%</progress>
+          <span>Wins</span>
+          <progress id="winsBar"value="0" max="5">0%</progress>
+        </div>
+        <h3>Grant Stats</h3>
+        <div id="grantStats">
 
-    <script type="text/javascript" src="script.js"></script>
+          <span>Health</span>
+          <progress id="grantHealthBar" value="10" max="10">0%</progress>
+        </div>
+      </div>
+
+
+    </div>
+
+    <script src="script2.js"></script>
   </body>
 </html>
