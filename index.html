@@ -10,13 +10,13 @@
     <header>
       <button id="startButton" type="button" name="button">Start</button>
     </header>
-    <div id="main" class="displayNon">
+    <div id="main" class="displayNone">
       <div class="buttons">
         <button id="attackButton"  type="button" name="button">Attack</button>
         <button id="healButton"  type="button" name="button">Heal</button>
         <button id="quitButton" type="button" name="button">Quit/Restart</button>
       </div>
-      <p id="message">:</p>
+      <p id="message">Use the ATTACK button to fight Grant.  You must defeat him 5 times.</p>
       <div class="stats">
         <div id="name"><h3>Player Stats</h3></div>
         <div id="playerStats">
@@ -34,8 +34,8 @@
           <progress id="grantHealthBar" value="10" max="10">0%</progress>
         </div>
       </div>
-
-
+      <audio id="audio" src="audio/Dynasty Wars - Boss.mp3" autoplay="true" loop="true"></audio>
+      <button id=muteButton type="button" name="button">mute</button>
     </div>
 
     <script src="script2.js"></script>

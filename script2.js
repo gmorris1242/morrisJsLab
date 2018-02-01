@@ -28,19 +28,21 @@
   var attackButton = document.getElementById("attackButton");
   var healButton = document.getElementById("healButton");
   var quitButton = document.getElementById("quitButton");
+  var muteButton = document.getElementById("muteButton");
   var characterHealthBar = document.getElementById("characterHealthBar");
   var healsRemainingBar = document.getElementById("healsRemainingBar");
   var winsBar = document.getElementById("winsBar");
   var messageEl = document.getElementById("message");
   var grantHealthBar = document.getElementById("grantHealthBar");
+  var audio = document.getElementById("audio");
 
-
+console.log(audio);
 
   attackButton.onclick = function() {
 
     character.health -= grant.generateAttackDamage();
     grant.health -= character.generateAttackDamage();
-    updateMessage(character.name + " : -" + character.health+ " health remaining. Grant the Mighty Chicken has " + grant.health + " health remaining.");
+    updateMessage(character.name + ": " + character.health + " health remaining || Grant: " + grant.health + " health remaining.");
     updateDisplay();
 
     if (grant.health <= 0) {
@@ -58,7 +60,7 @@
         healButton.classList.add("displayNone");
 
       } else {
-        updateMessage("Grant's health resets.  You must beat Grant 5 times");
+        updateMessage(character.name + ": " + character.health + " health remaining ||  You must beat Grant 5 times");
       }
     } else if (character.health <= 0) {
       updateDisplay();
@@ -75,7 +77,7 @@
       character.heal();
       character.healsRemaining--;
       updateDisplay();
-      updateMessage("You have healed");
+      updateMessage(character.name + ": " + character.health + " health remaining || YOU HAVE HEALED");
     } else {
       updateDisplay();
       updateMessage("You have no heals left");
@@ -93,6 +95,13 @@
     window.location.reload();
   }
 
+  // muteButton.onclick = function() {
+  //   if (audio.muted = false){
+  //     audio.muted = true;
+  //   }
+muteButton.onclick = function() {
+  audio.muted = !audio.muted;
+}
 
 
   function updateDisplay() {
