@@ -11,6 +11,7 @@
   margin: 0;
   box-sizing: border-box;
   font-family: "arcadeclassicregular", sans-serif;
+  word-spacing: 5px;
 }
 
 body{
