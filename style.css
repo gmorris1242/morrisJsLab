@@ -1,7 +1,14 @@
+@@font-face {
+  font-family: "game over";
+  src: url(/Users/georgemacbook/documents/GCLabs/jslab/fonts/game_over.ttf);
+}
+
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+  font-family: "game over";
+  font-size: 2rem;
 }
 
 header {
@@ -16,6 +23,7 @@ button {
   width: 200px;
   height: auto;
   margin-top: 30px;
+  font-weight: bold;
 }
 
 p {
