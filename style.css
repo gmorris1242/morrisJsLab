@@ -53,14 +53,12 @@ p {
   text-align: center;
   margin: 0 auto;
   margin-top: 10px;
-  justify-content: center;
   min-width: 250px;
   min-height: 100px;
   margin-top: 50px;
 }
 
 #main {
-  /* display: none; */
   margin: 0 auto;
   text-align: center;
 }

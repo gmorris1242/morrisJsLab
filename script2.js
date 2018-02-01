@@ -46,7 +46,7 @@ console.log(audio);
     updateDisplay();
 
     if (grant.health <= 0) {
-      grant.health = 10;
+      // grant.health = 10;
       character.wins++;
       updateDisplay();
       if (character.wins === 5) {
@@ -61,6 +61,7 @@ console.log(audio);
 
       } else {
         updateMessage(character.name + ": " + character.health + " health remaining ||  You must beat Grant 5 times");
+        grant.health = 10;
       }
     } else if (character.health <= 0) {
       updateDisplay();
