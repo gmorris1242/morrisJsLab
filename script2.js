@@ -40,7 +40,7 @@
 
     character.health -= grant.generateAttackDamage();
     grant.health -= character.generateAttackDamage();
-    updateMessage(character.name + " has " + character.health+ " health remaining. Grant the Mighty Chicken has " + grant.health + " health remaining.");
+    updateMessage(character.name + " : -" + character.health+ " health remaining. Grant the Mighty Chicken has " + grant.health + " health remaining.");
     updateDisplay();
 
     if (grant.health <= 0) {
