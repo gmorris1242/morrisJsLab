@@ -110,3 +110,9 @@ audio {
 #muteButton {
   background-color: white;
 }
+
+@media (max-width: 463px) {
+  #playerStats {
+    flex-wrap: wrap;
+  }
+}

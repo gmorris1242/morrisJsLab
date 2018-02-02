@@ -36,8 +36,6 @@
   var grantHealthBar = document.getElementById("grantHealthBar");
   var audio = document.getElementById("audio");
 
-console.log(audio);
-
   attackButton.onclick = function() {
 
     character.health -= grant.generateAttackDamage();
@@ -46,13 +44,12 @@ console.log(audio);
     updateDisplay();
 
     if (grant.health <= 0) {
-      // grant.health = 10;
       character.wins++;
       updateDisplay();
       if (character.wins === 5) {
         updateMessage("YOU WIN!");
-      attackButton.classList.add("displayNone");
-      healButton.classList.add("displayNone");
+        attackButton.classList.add("displayNone");
+        healButton.classList.add("displayNone");
       } else if (character.health <= 0) {
         updateDisplay();
         updateMessage("Grant Wins!");
@@ -71,7 +68,6 @@ console.log(audio);
 
     }
   };
-
 
   healButton.onclick = function() {
     if (character.healsRemaining > 0) {
@@ -96,14 +92,9 @@ console.log(audio);
     window.location.reload();
   }
 
-  // muteButton.onclick = function() {
-  //   if (audio.muted = false){
-  //     audio.muted = true;
-  //   }
-muteButton.onclick = function() {
-  audio.muted = !audio.muted;
-}
-
+  muteButton.onclick = function() {
+    audio.muted = !audio.muted;
+  }
 
   function updateDisplay() {
     characterHealthBar.value = character.health;
